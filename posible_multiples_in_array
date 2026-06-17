@@ -1,0 +1,18 @@
+n = int(input())
+nums = list(map(int, input().split()))
+
+answer = []
+
+# Loop through each element in the array
+for i in range(n):
+    current_product = 1
+   
+    # Multiply every element EXCEPT the one at index i
+    for j in range(n):
+        if j != i:
+            current_product *= nums[j]
+           
+    answer.append(current_product)
+
+# Print the list as space-separated values
+print(*answer)
